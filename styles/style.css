@@ -13,7 +13,7 @@ html {
   block-size: 100%;
   margin: auto;
   color: #fff;
-  font-family: "Fira Sans Condensed", sans-serif;
+  font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
   line-height: 100%;
   background-color: #1b1919;
@@ -67,7 +67,7 @@ ol {
 
 .content {
   display: flex;
-  align-items: flex-end;
+  align-items: flex-start;
   justify-content: space-between;
   gap: 30px;
   width: 1140px;
@@ -75,6 +75,7 @@ ol {
 
 .result {
   width: 711px;
+  margin-top: 75px;
 }
 
 .content__details {
@@ -90,11 +91,10 @@ ol {
   justify-content: space-between;
   align-items: flex-start;
   column-gap: 40px;
-  margin-top: 16px;
+  margin-top: 18px;
 }
 
 .content__list-container {
-  margin-top: 0 !important;
   block-size: 298px;
   overflow-y: auto;
   display: flex;
@@ -116,7 +116,7 @@ ol {
   position: relative;
   inline-size: 100%;
   block-size: 386px;
-  margin-bottom: 16px;
+  margin-bottom: 8px;
   background-color: #000;
 }
 
@@ -133,10 +133,6 @@ ol {
   margin-bottom: 30px;
 }
 
-.content__video-card:active {
-  background-color: #545050;
-}
-
 .content__video-card-thumbnail {
   min-inline-size: 194px;
   block-size: 103px;
@@ -146,7 +142,7 @@ ol {
 
 .content__video-card-description-container {
   flex-grow: 1;
-  padding-top: 6px;
+  padding-top: 1px;
   min-width: 0;
   overflow: hidden;
 }
@@ -154,8 +150,8 @@ ol {
 .search-form__fieldset-title {
   font-size: 18px;
   font-weight: 400;
-  margin: 0 0 8px;
-  font-family: "Fira Sans Condensed", sans-serif;
+  margin: 0 0 7px;
+  font-family: 'Fira Sans Condensed', sans-serif;
 }
 
 .search-form__fieldset:first-of-type {
@@ -172,12 +168,11 @@ ol {
   line-height: 94%;
   margin-bottom: 0;
   text-transform: uppercase;
-  font-family: "Oswald", sans-serif;
+  font-family: 'Oswald', sans-serif;
 }
 
 .content__accent {
   color: #545050;
-  font-weight: 400;
 }
 
 .content__card-link {
@@ -192,20 +187,22 @@ ol {
 .content__video-card-title {
   font-size: 30px;
   font-weight: 700;
+  font-family: 'Oswald', sans-serif;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
   text-transform: uppercase;
-  line-height: 1.1;
+  line-height: 1;
   padding-top: 2px;
+  padding-bottom: 5px;
   display: block;
 }
 
 .content__video-card-description {
   font-size: 18px;
-  line-height: 16px;
+  line-height: 16.2px;
   display: -webkit-box;
-  -webkit-line-clamp: 2;
+  -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
@@ -227,19 +224,19 @@ ol {
 .search-form__label {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 3px;
   inline-size: fit-content;
 }
 
 .search-form__label-text {
   font-size: 18px;
   font-weight: 400;
-  font-family: "Fira Sans Condensed", sans-serif;
+  font-family: 'Fira Sans Condensed', sans-serif;
 }
 
 .search-form__textfield {
   min-inline-size: 225px;
-  padding-block: 4px;
+  padding-block: 2px;
   border: none;
   border-block-start: 1px solid #fff;
   border-block-end: 1px solid #fff;
@@ -257,7 +254,7 @@ ol {
   outline: none;
 }
 
-.search-form__label:has(.search-form__textfield:focus-visible) {
+.search-form__label:has(:focus-visible) {
   outline: 1px solid #fff;
   outline-offset: 2px;
 }
@@ -271,7 +268,7 @@ ol {
 }
 
 .search-form__pseudo-checkbox::after {
-  content: "";
+  content: '';
   display: block;
   inline-size: 100%;
   block-size: 100%;
@@ -283,11 +280,6 @@ ol {
   opacity: 1;
 }
 
-.search-form__label:has(.search-form__checkbox:focus-visible) {
-  outline: 1px solid #fff;
-  outline-offset: 2px;
-}
-
 .search-form__label:hover .search-form__label-text {
   text-decoration: underline;
 }
@@ -297,18 +289,15 @@ ol {
   background-color: transparent;
   color: #fff;
   font: inherit;
+  font-weight: 700;
+  line-height: 1;
+  padding-block: 7px;
+  padding-inline: 73px;
   cursor: pointer;
 }
 
 .search-form__submit-button {
-  padding-block: 6px;
-  padding-inline: 73px;
-  line-height: 20px;
-  align-self: flex-end;
-}
-
-.search-form__submit-button:active {
-  background-color: #545050;
+  margin-top: 18px;
 }
 
 .more-button {
@@ -334,7 +323,11 @@ ol {
 }
 
 .content__card-link_current {
-  background-color: transparent;
+  background-color: #545050;
+}
+
+.content__card-link:hover {
+  background-color: #545050;
 }
 
 .content__card-link:active {
@@ -363,9 +356,4 @@ ol {
 .result__video-container,
 .content__list-container {
   position: relative;
-}
-
-.content__card-link_current,
-.content__card-link:active {
-  background-color: transparent !important;
 }
